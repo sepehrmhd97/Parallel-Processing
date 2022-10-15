@@ -21,7 +21,7 @@ if __name__ == "__main__":
     plt.plot(xlist, ylist)
     plt.xlabel('N')
     plt.ylabel('Time')
-    plt.show() 
-    plt.savefig('my_plot.png') 
+    #plt.show() 
+    plt.savefig('purepython.jpeg') 
     
     #print(ylist)
