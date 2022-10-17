@@ -23,8 +23,8 @@ void Person::set(int n){
 	age = n;
 	}
 int Person::fib(int n){
-	if (n==1 || n== 2)
-		return 1;
+	if (n==1 || n== 0)
+		return n;
 	return fib(n-2)+fib(n-1);
 }
 
