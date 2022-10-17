@@ -24,6 +24,7 @@ def main():
     ylist_py = []
     ylist_numba = []
     ylist_c = []
+    l = Person(n)
     
     for i in xlist:
         start = pc()
@@ -37,13 +38,19 @@ def main():
         ylist_numba.append(end -start)
         
         start = pc()
-        Person.fib_c(i)
+        l.fib_c(l.get())
         end = pc()
         ylist_c.append(end -start)
         
-    print(ylist_py)
-    print(ylist_numba)
-    print(ylist_c)
+    # print(ylist_py)
+    # print(ylist_numba)
+    # print(ylist_c)
+    plt.plot(xlist,ylist_py,label = "python")
+    plt.plot(xlist,ylist_py,label = "numba")
+    plt.plot(xlist,ylist_c,label = "c++")
+    plt.yscale('log')
+    plt.legend()
+    plt.savefig('figure.png')
         
         
 
