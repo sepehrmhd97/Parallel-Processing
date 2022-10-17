@@ -66,7 +66,7 @@ def main():
     print(f'time for numba 47: {round(end - start, 2)}')   
     
     start = pc()
-    l.fib_c(47)
+    l.fib(47)
     end = pc()
     print(f'time for hybrid 47: {round(end - start, 2)}')      
         
