@@ -21,11 +21,11 @@ class Person(object):
 	def set(self, age):
 		lib.Person_set(self.obj, age)
 	
-	def fib_c(self, age):
-		if age <= 1:
+	def fib_c(self, n):
+		if n <= 1:
 			return 1
 		else:
-			return (lib.Person_fib(self.obj,age-1) + lib.Person_fib(self.obj,age-1))
+			return (lib.Person_fib(self.obj,n-1) + lib.Person_fib(self.obj,n-1))
         
 	def __del__(self):
 		return lib.Person_delete(self.obj)
