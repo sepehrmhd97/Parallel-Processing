@@ -24,7 +24,7 @@ if __name__ == "__main__":
     plt.plot(xlist, ylist)
     plt.xlabel('N')
     plt.ylabel('Time')
-    #plt.show() 
+    plt.show() 
     plt.savefig('numba.jpeg') 
     
    

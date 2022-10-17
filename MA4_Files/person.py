@@ -1,5 +1,6 @@
 """ Python interface to the C++ Person class """
 import ctypes
+from tkinter import N
 lib = ctypes.cdll.LoadLibrary('./libperson.so')
 
 class Person(object):
@@ -17,6 +18,12 @@ class Person(object):
 
 	def set(self, age):
 		lib.Person_set(self.obj, age)
+	
+	def fib_c(self, n):
+		if n <= 1:
+			return n 
+		else:
+			return (lib.Person_fib(self.obj, n-1) + lib.Person_fib(self.obj, n-2))
         
 	def __del__(self):
 		return lib.Person_delete(self.obj)
