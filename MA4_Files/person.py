@@ -26,7 +26,7 @@ class Person(object):
 		if n <= 1:
 			return 1
 		else:
-			return (lib.Person_fib(self.obj, n-1) + lib.Person_fib(self.obj, n-2))
+			return (lib.Person_fib(self.obj, n-1) + lib.Person_fib(self.obj, n-1))
         
 	def __del__(self):
 		return lib.Person_delete(self.obj)
