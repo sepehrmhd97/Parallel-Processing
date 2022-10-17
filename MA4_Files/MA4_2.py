@@ -39,7 +39,7 @@ def main():
         
         l = Person(i)
         start = pc()
-        l.fib_c(l.get())
+        l.fib()
         end = pc()
         ylist_c.append(end -start)
         
