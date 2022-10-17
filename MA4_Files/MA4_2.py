@@ -52,6 +52,8 @@ def main():
     plt.yscale('log')
     plt.legend()
     plt.savefig('figure.png')
+    plt.show(block = False)
+    plt.close()
     
     fib_numba(2)
     
