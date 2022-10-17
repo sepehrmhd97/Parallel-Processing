@@ -60,15 +60,17 @@ def main():
     # end = pc()
     # print(f'time for pure python 47: {round(end - start, 2)}') 
     
-    start = pc()
-    fib_numba(47)
-    end = pc()
-    print(f'time for numba 47: {round(end - start, 2)}')   
+    #start = pc()
+    print(fib_numba(47))
+    #end = pc()
+    #print(f'time for numba 47: {round(end - start, 2)}')   
     
-    start = pc()
-    l.fib(47)
-    end = pc()
-    print(f'time for hybrid 47: {round(end - start, 2)}')      
+    f = Person(47)
+    #start = pc()
+    print(f.fib())
+    #end = pc()
+    
+    #print(f'time for hybrid 47: {round(end - start, 2)}')      
         
 
 if __name__ == '__main__':
