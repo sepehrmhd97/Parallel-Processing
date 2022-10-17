@@ -1,6 +1,6 @@
 """ Python interface to the C++ Person class """
 import ctypes
-from tkinter import N
+
 lib = ctypes.cdll.LoadLibrary('./libperson.so')
 
 class Person(object):
