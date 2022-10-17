@@ -24,7 +24,7 @@ def main():
     ylist_py = []
     ylist_numba = []
     ylist_c = []
-    l = Person(n)
+    
     
     for i in xlist:
         start = pc()
@@ -37,6 +37,7 @@ def main():
         end = pc()
         ylist_numba.append(end -start)
         
+        l = Person(i)
         start = pc()
         l.fib_c(l.get())
         end = pc()
@@ -51,7 +52,23 @@ def main():
     plt.yscale('log')
     plt.legend()
     plt.savefig('figure.png')
-        
+    
+    fib_numba(2)
+    
+    # start = pc()
+    # fib_py(47)
+    # end = pc()
+    # print(f'time for pure python 47: {round(end - start, 2)}') 
+    
+    start = pc()
+    fib_numba(47)
+    end = pc()
+    print(f'time for numba 47: {round(end - start, 2)}')   
+    
+    start = pc()
+    l.fib_c(47)
+    end = pc()
+    print(f'time for hybrid 47: {round(end - start, 2)}')      
         
 
 if __name__ == '__main__':
